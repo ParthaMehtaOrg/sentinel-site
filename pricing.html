@@ -4,12 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — Sentinel AI Agent Security</title>
-  <meta name="description" content="Simple, transparent pricing for every team. Open source, Pro, and Enterprise plans for AI agent security.">
+  <meta name="description" content="Simple pricing. No surprises. Free to self-host. Pay only for advanced verticals, deep analysis, and enterprise features.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .payment-section{background:var(--bg-warm);padding:4rem 0;}
+    .qr-placeholder{width:220px;height:220px;margin:1.5rem auto;border-radius:12px;overflow:hidden;border:2px solid var(--border);}
+    .qr-placeholder img{width:100%;height:100%;object-fit:cover;}
+    .upi-id{font-family:'JetBrains Mono',monospace;font-size:0.95rem;background:var(--bg-card);border:1px solid var(--border);padding:0.75rem 1.25rem;border-radius:8px;text-align:center;margin:1rem auto;max-width:360px;user-select:all;}
+    .gpay-btn{display:inline-flex;align-items:center;gap:0.5rem;background:#1a73e8;color:#fff;padding:0.75rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;font-size:1rem;transition:background 0.2s;}
+    .gpay-btn:hover{background:#1557b0;}
+    .payment-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin:2rem 0;}
+    .payment-steps .step{text-align:center;padding:1.5rem;background:var(--bg-card);border-radius:12px;border:1px solid var(--border);}
+    .payment-steps .step-num{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:0.75rem;}
+    .flash{padding:1rem 1.5rem;border-radius:8px;margin:1rem 0;font-weight:500;display:none;}
+    .flash.success{display:block;background:#dcfce7;color:#166534;border:1px solid #bbf7d0;}
+    .flash.error{display:block;background:#fee2e2;color:#991b1b;border:1px solid #fecaca;}
+    .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden;background:var(--bg-card);}
+    .faq-toggle{width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1rem;font-weight:600;color:var(--text-primary);font-family:inherit;text-align:left;}
+    .faq-toggle:hover{background:var(--bg-warm);}
+    .faq-answer{padding:0 1.5rem 1.25rem;color:var(--text-secondary);line-height:1.7;display:none;}
+    .faq-answer.open{display:block;}
+    .faq-icon{transition:transform 0.2s;font-size:1.25rem;flex-shrink:0;margin-left:1rem;}
+    .faq-icon.open{transform:rotate(45deg);}
+    .data-note{text-align:center;padding:1.5rem;margin:2rem auto;max-width:600px;font-size:0.9rem;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:12px;}
+  </style>
 </head>
 <body>
 
@@ -28,7 +50,7 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank">GitHub</a>
+        <a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank">GitHub</a>
         <a href="contact.html" class="nav-cta">Get Started</a>
         <a href="pricing.html" class="nav-cta">Get License</a>
       </div>
@@ -38,8 +60,8 @@
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Pricing</h1>
-      <p>Simple, transparent pricing for every team.</p>
+      <h1>Simple pricing. No surprises.</h1>
+      <p>Free to self-host. Pay only for advanced verticals, deep analysis, and enterprise features.</p>
     </div>
   </section>
 
@@ -48,61 +70,148 @@
     <div class="container">
       <div class="pricing-grid fade-in">
 
-        <!-- Open Source -->
+        <!-- Community -->
         <div class="pricing-card">
-          <h3>Open Source</h3>
-          <div class="price">$0<span>/mo</span></div>
+          <h3>Community</h3>
+          <div class="price">&#8377;0</div>
           <p class="period">Free forever</p>
           <ul class="pricing-features">
-            <li>8 security hooks (full plugin)</li>
+            <li>Up to 3 agents</li>
+            <li>8 security hooks</li>
             <li>5 endpoint monitors</li>
             <li>3 detection layers</li>
             <li>Unified dashboard</li>
-            <li>Block rules engine</li>
+            <li>Fintech vertical</li>
+            <li>SHA-256 hash chain</li>
+            <li>CLI diagnostics</li>
             <li>Community support</li>
           </ul>
-          <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          <a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;">Get started free &rarr;</a>
         </div>
 
         <!-- Pro -->
         <div class="pricing-card featured">
           <h3>Pro</h3>
-          <div class="price">$49<span>/mo</span></div>
-          <p class="period">Per agent host, billed annually</p>
+          <div class="price">&#8377;999<span>/mo</span></div>
+          <p class="period">or &#8377;7,999/year (save 33%)</p>
           <ul class="pricing-features">
-            <li>Everything in Open Source</li>
+            <li>Everything in Community</li>
+            <li>All 3 verticals (40+ breach types)</li>
             <li>LLM-powered content analysis</li>
-            <li>Agentic deep analysis (Claude)</li>
-            <li>Priority webhook alerts</li>
             <li>Advanced trace visualization</li>
+            <li>Webhook alerts (Slack, Discord)</li>
             <li>Auto-scaling</li>
+            <li>Multi-tenant auth &amp; RBAC</li>
+            <li>16-model cost tracking</li>
             <li>Email support</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start Free Trial</a>
+          <a href="#payment" class="btn btn-primary" style="width:100%;justify-content:center;">Buy Pro &rarr;</a>
         </div>
 
         <!-- Enterprise -->
         <div class="pricing-card">
           <h3>Enterprise</h3>
-          <div class="price">Custom</div>
-          <p class="period">Tailored to your organization</p>
+          <div class="price">&#8377;4,999<span>/mo</span></div>
+          <p class="period">Billed annually</p>
           <ul class="pricing-features">
             <li>Everything in Pro</li>
-            <li>Custom verticals &amp; breach types</li>
+            <li>Custom breach taxonomies</li>
+            <li>Custom vertical development</li>
+            <li>On-premise / air-gapped</li>
+            <li>SSO / SAML / OIDC</li>
+            <li>Compliance report generation</li>
+            <li>Dedicated account manager</li>
             <li>SLA guarantees</li>
-            <li>Dedicated support</li>
-            <li>SSO/SAML integration</li>
-            <li>On-premise deployment</li>
-            <li>Custom integrations</li>
+            <li>24/7 support</li>
           </ul>
-          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Contact Sales</a>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Contact us &rarr;</a>
         </div>
 
+      </div>
+
+      <div class="data-note">
+        <strong>🔒 Your data never leaves your server.</strong> All plans are fully self-hosted.
       </div>
     </div>
   </section>
 
-  <!-- FAQ-style comparison -->
+  <!-- Payment Section -->
+  <section class="payment-section" id="payment">
+    <div class="container-narrow">
+      <div class="section-header center fade-in">
+        <div class="section-eyebrow"><span class="dot"></span> Payment</div>
+        <h2 class="section-title">Pay via GPay / UPI</h2>
+        <p class="section-sub">Scan the QR code or tap the button below to pay instantly via UPI.</p>
+      </div>
+
+      <div style="text-align:center;" class="fade-in">
+        <div class="qr-placeholder">
+          <img src="upi-qr.png" alt="UPI QR Code">
+        </div>
+        <div class="upi-id">parthamehta10@okhdfcbank</div>
+        <div style="margin:1.5rem 0;">
+          <a href="upi://pay?pa=parthamehta10@okhdfcbank&pn=Sentinel&am=999&cu=INR&tn=Sentinel%20Pro" class="gpay-btn" id="gpay-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Pay with GPay
+          </a>
+        </div>
+      </div>
+
+      <div class="payment-steps fade-in">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Choose plan</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);">Select Pro or Enterprise below.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Pay via UPI</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);">Scan QR or tap GPay button.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Submit form</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);">Enter your UPI transaction ID below.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Get license</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);">License key emailed within 24 hours.</p>
+        </div>
+      </div>
+
+      <!-- License Form -->
+      <div style="max-width:520px;margin:2rem auto;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem;" class="fade-in">
+        <h3 style="margin-bottom:1.5rem;text-align:center;">Activate License</h3>
+        <div id="flash-msg" class="flash"></div>
+        <form id="license-form" onsubmit="return handleLicenseSubmit(event)">
+          <div class="form-group">
+            <label for="lic-email">Email</label>
+            <input type="email" id="lic-email" name="email" class="form-input" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="lic-name">Full Name</label>
+            <input type="text" id="lic-name" name="name" class="form-input" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="lic-plan">Plan</label>
+            <select id="lic-plan" name="plan" class="form-input" required onchange="updateGPayLink()">
+              <option value="pro-monthly" selected>Pro &mdash; &#8377;999/mo</option>
+              <option value="pro-annual">Pro &mdash; &#8377;7,999/year</option>
+              <option value="enterprise">Enterprise &mdash; &#8377;4,999/mo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="lic-txn">UPI Transaction ID</label>
+            <input type="text" id="lic-txn" name="txn_id" class="form-input" placeholder="e.g. 412345678901" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Submit &amp; Activate</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Comparison Table -->
   <section class="bg-warm">
     <div class="container">
       <div class="section-header center fade-in">
@@ -113,21 +222,79 @@
       <div class="table-wrap fade-in">
         <table>
           <thead>
-            <tr><th>Feature</th><th>Open Source</th><th>Pro</th><th>Enterprise</th></tr>
+            <tr><th>Feature</th><th>Community</th><th>Pro</th><th>Enterprise</th></tr>
           </thead>
           <tbody>
+            <tr><td>Agents supported</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
             <tr><td>8-Hook Security Plugin</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
             <tr><td>Endpoint Monitors</td><td>5</td><td>5</td><td>Unlimited</td></tr>
-            <tr><td>Breach Detection (Rule-based)</td><td><span class="badge-green">40+ types</span></td><td><span class="badge-green">40+ types</span></td><td><span class="badge-green">Custom types</span></td></tr>
-            <tr><td>LLM Content Analysis</td><td>—</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
-            <tr><td>Agentic Deep Analysis</td><td>—</td><td><span class="badge-green">Claude</span></td><td><span class="badge-green">Claude + Custom</span></td></tr>
+            <tr><td>Detection Layers</td><td>3</td><td>3</td><td>3 + Custom</td></tr>
+            <tr><td>Verticals</td><td>Fintech only</td><td><span class="badge-green">All 3 (40+ types)</span></td><td><span class="badge-green">All 3 + Custom</span></td></tr>
+            <tr><td>SHA-256 Hash Chain</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>LLM Content Analysis</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
             <tr><td>Trace Visualization</td><td>Basic</td><td><span class="badge-green">Advanced</span></td><td><span class="badge-green">Advanced</span></td></tr>
-            <tr><td>Webhook Alerts</td><td>—</td><td><span class="badge-green">Priority</span></td><td><span class="badge-green">Priority + Custom</span></td></tr>
-            <tr><td>SSO / SAML</td><td>—</td><td>—</td><td><span class="badge-green">Yes</span></td></tr>
-            <tr><td>On-Premise Deployment</td><td>—</td><td>—</td><td><span class="badge-green">Yes</span></td></tr>
-            <tr><td>Support</td><td>Community</td><td>Email</td><td>Dedicated</td></tr>
+            <tr><td>Webhook Alerts</td><td>&mdash;</td><td><span class="badge-green">Slack, Discord</span></td><td><span class="badge-green">Slack, Discord + Custom</span></td></tr>
+            <tr><td>Multi-tenant Auth &amp; RBAC</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>16-Model Cost Tracking</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>SSO / SAML / OIDC</td><td>&mdash;</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>On-Premise / Air-Gapped</td><td>&mdash;</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>Compliance Report Generation</td><td>&mdash;</td><td>&mdash;</td><td><span class="badge-green">Yes</span></td></tr>
+            <tr><td>Support</td><td>Community</td><td>Email</td><td>24/7 Dedicated</td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container-narrow">
+      <div class="section-header center fade-in">
+        <div class="section-eyebrow"><span class="dot"></span> FAQ</div>
+        <h2 class="section-title">Frequently asked questions</h2>
+      </div>
+      <div class="fade-in">
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">How do I receive my license key? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">After payment verification, we email your license key within 24 hours. The key is a signed JWT token that you add to your Sentinel config file. No internet connection is required after activation.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">How do I activate my license? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">Run <code>sentinel activate --key YOUR_KEY</code> from your terminal. The CLI validates the key locally using Ed25519 signature verification. Once activated, all Pro/Enterprise features unlock immediately.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">Does license verification require internet? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. License verification is fully offline. The key contains an Ed25519 signature that is validated locally against the embedded public key. Your server never phones home.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">Can I use one license on multiple machines? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">Each Pro license covers one machine (host). If you need to run Sentinel on multiple servers, you need one license per host. Enterprise licenses include volume discounts — contact us for details.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">Does upgrading require code changes? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. Sentinel uses zero-code auto-instrumentation via sitecustomize.py. Upgrading from Community to Pro simply unlocks additional features. No code changes, no redeployment, no SDK updates.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">What is your refund policy? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">We offer a full refund within 14 days of purchase if you are not satisfied. Email us with your transaction ID and we will process the refund within 3 business days.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">How long is my license valid? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">Monthly licenses are valid for 30 days and auto-renew. Annual licenses are valid for 365 days. You receive a renewal reminder 7 days before expiry. If a license expires, Sentinel falls back to Community features — no data is lost.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)">What happens if your service goes down? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">Sentinel is fully self-hosted. Our service availability has zero impact on your deployment. License activation is offline, breach detection is local, and the dashboard runs on your machine. There is no cloud dependency.</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -136,30 +303,72 @@
   <section class="cta-section">
     <div class="container-narrow fade-in">
       <h2 class="section-title" style="position:relative;z-index:1;">Start protecting your AI agents today.</h2>
-      <p class="section-sub" style="margin:1rem auto 2rem;position:relative;z-index:1;">The open-source edition is fully functional. Upgrade when you need LLM-powered analysis and enterprise controls.</p>
+      <p class="section-sub" style="margin:1rem auto 2rem;position:relative;z-index:1;">The Community edition is fully functional. Upgrade when you need all verticals, LLM-powered analysis, and enterprise controls.</p>
       <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
         <a href="contact.html" class="btn btn-primary btn-lg">Request Early Access</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank" class="btn btn-outline btn-lg">View on GitHub →</a>
+        <a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank" class="btn btn-outline btn-lg">View on GitHub &rarr;</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="simple-footer">
-    <div class="simple-footer-inner">
-      <span class="simple-footer-copy">&copy; 2026 Sentinel</span>
-      <div class="simple-footer-links">
-        <a href="index.html">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank">GitHub</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="icon">🛡️</span> Sentinel</div>
+          <p class="footer-desc">Unified AI agent security platform — endpoint monitoring, real-time interception, policy enforcement, compliance breach detection, and DLP. Install once, everything is automatic.</p>
+        </div>
+        <div><h4>Product</h4><a href="features.html" class="footer-link">Features</a><a href="pricing.html" class="footer-link">Pricing</a><a href="docs.html" class="footer-link">Docs</a><a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank" class="footer-link">GitHub</a></div>
+        <div><h4>Company</h4><a href="about.html" class="footer-link">About</a><a href="blog.html" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div>
+        <div><h4>Legal</h4><a href="#" class="footer-link">Privacy Policy</a><a href="#" class="footer-link">Terms of Service</a><a href="#" class="footer-link">Security</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Sentinel. All rights reserved.</span>
+        <div class="footer-socials"><a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank">GitHub</a></div>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(btn){
+      const answer=btn.nextElementSibling;
+      const icon=btn.querySelector('.faq-icon');
+      const isOpen=answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i=>i.classList.remove('open'));
+      if(!isOpen){answer.classList.add('open');icon.classList.add('open');}
+    }
+
+    function updateGPayLink(){
+      const plan=document.getElementById('lic-plan').value;
+      const link=document.getElementById('gpay-link');
+      const amounts={'pro-monthly':'999','pro-annual':'7999','enterprise':'4999'};
+      const names={'pro-monthly':'Sentinel%20Pro','pro-annual':'Sentinel%20Pro%20Annual','enterprise':'Sentinel%20Enterprise'};
+      const am=amounts[plan]||'999';
+      const tn=names[plan]||'Sentinel%20Pro';
+      link.href='upi://pay?pa=parthamehta10@okhdfcbank&pn=Sentinel&am='+am+'&cu=INR&tn='+tn;
+    }
+
+    function handleLicenseSubmit(e){
+      e.preventDefault();
+      const flash=document.getElementById('flash-msg');
+      const form=document.getElementById('license-form');
+      const email=document.getElementById('lic-email').value;
+      const name=document.getElementById('lic-name').value;
+      const plan=document.getElementById('lic-plan').value;
+      const txn=document.getElementById('lic-txn').value;
+      if(!email||!name||!txn){
+        flash.className='flash error';
+        flash.textContent='Please fill in all fields.';
+        return false;
+      }
+      flash.className='flash success';
+      flash.textContent='Thank you, '+name+'! We will verify your payment and email your license key within 24 hours.';
+      form.reset();
+      return false;
+    }
+  </script>
 </body>
 </html>

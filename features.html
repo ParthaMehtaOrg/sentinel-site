@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Features — Sentinel AI Agent Security</title>
-  <meta name="description" content="Eight security layers unified into one platform. Endpoint monitoring, policy enforcement, compliance breach detection, DLP, and LLM response inspection.">
+  <meta name="description" content="Eight security layers unified into one platform to protect every AI agent. Endpoint monitoring, policy enforcement, compliance breach detection, DLP, and LLM response inspection.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank">GitHub</a>
+        <a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank">GitHub</a>
         <a href="contact.html" class="nav-cta">Get Started</a>
         <a href="pricing.html" class="nav-cta">Get License</a>
       </div>
@@ -38,119 +38,189 @@
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Features</h1>
-      <p>Eight security layers, unified into one platform.</p>
+      <h1>Built for security. Designed for speed.</h1>
+      <p>Eight security layers unified into one platform to protect every AI agent.</p>
     </div>
   </section>
 
-  <!-- Features Grid -->
+  <!-- Core Engine -->
   <section>
     <div class="container">
       <div class="section-header center fade-in">
-        <div class="section-eyebrow"><span class="dot"></span> Capabilities</div>
-        <h2 class="section-title">Everything you need to secure AI agents</h2>
-        <p class="section-sub">Nine core capabilities that work together to protect every AI agent on your infrastructure — from prompt injection to data exfiltration.</p>
+        <div class="section-eyebrow"><span class="dot"></span> Core Engine</div>
+        <h2 class="section-title">Intelligent threat detection</h2>
+        <p class="section-sub">Two complementary systems that analyze every prompt and every LLM response in real time.</p>
       </div>
-      <div class="grid-3 fade-in">
-        <div class="card">
-          <div class="card-icon indigo">🔒</div>
-          <h3>8-Hook Plugin</h3>
-          <p>message_received, before_tool_call, after_tool_call, before_prompt_build, llm_input, llm_output, message_sending, before_message_write.</p>
-        </div>
+      <div class="grid-2 fade-in">
         <div class="card">
           <div class="card-icon orange">🔍</div>
           <h3>3-Layer Prompt Analysis</h3>
-          <p>Layer 0: pattern matching (&lt;1ms). Layer 1: weighted risk scoring (&lt;50ms). Layer 2: local Ollama LLM for ambiguous cases (1-5s).</p>
-        </div>
-        <div class="card">
-          <div class="card-icon green">🔗</div>
-          <h3>SHA-256 Audit Chain</h3>
-          <p>Every breach record is checksummed and chained. No UPDATE or DELETE. Tamper detection runs automatically.</p>
+          <p><strong>Layer 0:</strong> Pattern matching — regex-based detection of known injection patterns in under 1ms.</p>
+          <p style="margin-top:0.5rem;"><strong>Layer 1:</strong> Weighted risk scoring — 15+ heuristics evaluate prompt structure, entropy, and suspicious patterns in under 50ms.</p>
+          <p style="margin-top:0.5rem;"><strong>Layer 2:</strong> Local Ollama LLM — for ambiguous cases, a local model classifies intent in 1-5 seconds. Never blocks the pipeline.</p>
         </div>
         <div class="card">
           <div class="card-icon purple">🧠</div>
           <h3>LLM Response Proxy</h3>
-          <p>Sits between agent and LLM APIs. Measures latency, extracts tokens, computes cost (16-model pricing), enforces block rules.</p>
+          <p>An HTTP reverse proxy that sits between your agent and any LLM API (OpenAI, Anthropic, etc.). It intercepts every response, measures latency, extracts token counts, computes cost across 16 model pricing tiers, and enforces block rules before the response reaches the agent.</p>
+          <p style="margin-top:0.5rem;">Supports trace correlation — every request/response pair is linked to the originating agent session for full end-to-end visibility.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrity -->
+  <section class="bg-warm">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <div class="section-eyebrow"><span class="dot"></span> Integrity</div>
+        <h2 class="section-title">Tamper-proof audit infrastructure</h2>
+        <p class="section-sub">Every security event produces an immutable record that satisfies the strictest regulatory auditors.</p>
+      </div>
+      <div class="grid-3 fade-in">
+        <div class="card">
+          <div class="card-icon green">🔗</div>
+          <h3>SHA-256 Hash Chain</h3>
+          <p>Every audit record is checksummed and chained to the previous entry. Tampering with any record breaks the chain, and Sentinel detects it automatically on every read.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon indigo">💾</div>
+          <h3>Immutable Dual-Write</h3>
+          <p>Records are written to both the primary database and an append-only backup. The schema enforces INSERT-only — no UPDATE, no DELETE operations are permitted.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon red">🚨</div>
+          <h3>Tamper Alerts</h3>
+          <p>If a hash chain break is detected, Sentinel immediately fires a webhook alert (Slack, Discord, email) and logs the tamper event with full forensic context.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto-Instrumentation -->
+  <section>
+    <div class="container">
+      <div class="section-header center fade-in">
+        <div class="section-eyebrow"><span class="dot"></span> Auto-Instrumentation</div>
+        <h2 class="section-title">Zero-code agent protection</h2>
+        <p class="section-sub">Sentinel patches LLM frameworks at import time. No SDK, no decorators, no middleware.</p>
+      </div>
+      <div class="grid-2 fade-in">
+        <div class="card">
+          <div class="card-icon">🔌</div>
+          <h3>Supported Frameworks</h3>
+          <p>Sentinel's sitecustomize.py hook automatically monkey-patches these frameworks at import time:</p>
+          <ul style="margin-top:0.75rem;padding-left:1.25rem;color:var(--text-secondary);line-height:1.8;">
+            <li><strong>OpenAI</strong> — chat.completions.create, embeddings.create</li>
+            <li><strong>Anthropic</strong> — messages.create</li>
+            <li><strong>LangChain</strong> — LLM and ChatModel invoke/ainvoke</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon green">⚡</div>
+          <h3>How It Works</h3>
+          <p>Python's sitecustomize.py runs before any user code. Sentinel installs a persistent hook that intercepts <code>import openai</code>, <code>import anthropic</code>, and <code>import langchain</code> at the module level.</p>
+          <p style="margin-top:0.75rem;">Every API call is transparently routed through the policy engine and LLM proxy — capturing prompts, responses, tokens, latency, and cost. The developer changes zero lines of code.</p>
+          <div style="margin-top:1rem;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1rem;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">
+            <div style="color:var(--accent);font-weight:600;">$ sentinel doctor</div>
+            <div>sitecustomize.py ............. INSTALLED</div>
+            <div>OpenAI patched ............... YES</div>
+            <div>Anthropic patched ............ YES</div>
+            <div>LangChain patched ............ YES</div>
+            <div>Policy engine ................ RUNNING :8000</div>
+            <div>LLM proxy .................... RUNNING :18790</div>
+            <div style="color:#22c55e;font-weight:600;">All checks passed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operations -->
+  <section class="bg-warm">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <div class="section-eyebrow"><span class="dot"></span> Operations</div>
+        <h2 class="section-title">Monitor, alert, enforce</h2>
+        <p class="section-sub">Real-time visibility and control over every AI agent in your infrastructure.</p>
+      </div>
+      <div class="grid-3 fade-in">
         <div class="card">
           <div class="card-icon blue">📊</div>
           <h3>Unified Dashboard</h3>
-          <p>Overview, Live Events, Traces, Breach Monitor, Block Rules, Settings — real-time SSE, click-to-inspect, severity heatmaps.</p>
+          <p>Overview, Live Events, Traces, Breach Monitor, Block Rules, Settings — all in one real-time SSE-powered interface. Click any event to inspect the full prompt/response payload.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔌</div>
-          <h3>Zero-Touch Auto-Attach</h3>
-          <p>Persistent sitecustomize.py hook patches OpenAI, Anthropic, and LangChain at import time. No code changes ever.</p>
+          <div class="card-icon orange">🔔</div>
+          <h3>Webhook Alerts</h3>
+          <p>Send alerts to Slack, Discord, email, or any webhook endpoint. Configure severity thresholds, vertical filters, and rate limiting.</p>
         </div>
         <div class="card">
           <div class="card-icon red">🛑</div>
           <h3>Block Rules Engine</h3>
-          <p>keyword, regex, recipient, channel block rules. Seed defaults for passwords, API keys, SSNs, credit cards. CLI management.</p>
+          <p>Keyword, regex, recipient, and channel block rules. Seed defaults for passwords, API keys, SSNs, credit card numbers. Manage via CLI or dashboard.</p>
         </div>
         <div class="card">
           <div class="card-icon green">🍯</div>
           <h3>Honeypot Traps</h3>
-          <p>Decoy files at ~/.honeypot/.env, .aws/credentials, .ssh/id_rsa — any access triggers an immediate alert.</p>
+          <p>Decoy files at ~/.honeypot/.env, .aws/credentials, .ssh/id_rsa. Any file access triggers an immediate high-severity alert with process forensics.</p>
         </div>
         <div class="card">
           <div class="card-icon purple">🐳</div>
           <h3>Hardened Containers</h3>
-          <p>Non-root, read-only rootfs, cap_drop: ALL, no-new-privileges, custom seccomp profile. 9-point verification script.</p>
+          <p>Non-root, read-only rootfs, cap_drop: ALL, no-new-privileges, custom seccomp profile. 9-point verification script validates every security control.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon indigo">📡</div>
+          <h3>Channel Security</h3>
+          <p>The message_sending hook intercepts outbound messages to Telegram, WhatsApp, Discord, and Slack. Block rules prevent PII, credentials, and sensitive data from reaching external channels.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Security Layers Table -->
-  <section class="bg-warm">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-eyebrow"><span class="dot"></span> Security Layers</div>
-        <h2 class="section-title">Eight layers of defense — unified</h2>
-        <p class="section-sub">Sentinel combines five previously separate tools into a single platform. Every layer works together, every event feeds the same dashboard.</p>
-      </div>
-      <div class="table-wrap fade-in">
-        <table>
-          <thead>
-            <tr><th>Layer</th><th>What</th><th>How</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Endpoint Monitoring</td><td>Detect malicious processes, behavioral anomalies, file access</td><td><span class="badge-green">5 concurrent monitors</span></td></tr>
-            <tr><td>Policy Engine</td><td>Block dangerous prompts, tool calls, LLM responses</td><td><span class="badge-green">3-layer analysis (regex + rules + LLM)</span></td></tr>
-            <tr><td>Breach Compliance</td><td>Detect PII leaks, card exposure, HIPAA violations, scope creep</td><td><span class="badge-green">Rule-based &lt;1ms, 3 verticals</span></td></tr>
-            <tr><td>DLP &amp; Content Analysis</td><td>Detect PII, credentials, financial data in content</td><td><span class="badge-green">9 scanners + LLM classification</span></td></tr>
-            <tr><td>LLM Proxy</td><td>Intercept LLM responses, enforce block rules, track cost/latency</td><td><span class="badge-green">HTTP reverse proxy with tracing</span></td></tr>
-            <tr><td>Auto-Instrumentation</td><td>Monitor any Python agent with zero code changes</td><td><span class="badge-green">Monkey-patches OpenAI/Anthropic/LangChain</span></td></tr>
-            <tr><td>OpenClaw Plugin</td><td>Enforce security at 8 hook points inside the agent</td><td><span class="badge-green">Unified TypeScript plugin</span></td></tr>
-            <tr><td>Channel Security</td><td>Block PII/credentials from reaching Telegram/WhatsApp/Discord/Slack</td><td><span class="badge-green">message_sending hook + block rules</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- What's Running -->
+  <!-- Verticals -->
   <section>
     <div class="container">
       <div class="section-header center fade-in">
-        <div class="section-eyebrow"><span class="dot"></span> What's Running</div>
-        <h2 class="section-title">Services &amp; Ports</h2>
-        <p class="section-sub">All services start on boot via LaunchAgent. Auto-instrumentation hooks into every Python process. Nothing to configure.</p>
+        <div class="section-eyebrow"><span class="dot"></span> Verticals</div>
+        <h2 class="section-title">Industry-specific breach detection</h2>
+        <p class="section-sub">Pre-built classifiers for regulated industries. Each vertical detects domain-specific compliance violations with tagged regulatory frameworks.</p>
       </div>
-      <div class="table-wrap fade-in">
-        <table>
-          <thead>
-            <tr><th>Service</th><th>Port</th><th>Auto-starts?</th><th>Purpose</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>OpenClaw Gateway</td><td>18789</td><td><span class="badge-green">Yes (LaunchAgent)</span></td><td>AI agent runtime with 8 security hooks</td></tr>
-            <tr><td>Policy Engine</td><td>8000</td><td><span class="badge-green">Yes (LaunchAgent)</span></td><td>Prompt analysis, DLP, unified dashboard</td></tr>
-            <tr><td>Breach Intel</td><td>8081</td><td><span class="badge-green">Yes (LaunchAgent)</span></td><td>Compliance breach classification &amp; audit</td></tr>
-            <tr><td>LLM Proxy</td><td>18790</td><td><span class="badge-green">Yes (LaunchAgent)</span></td><td>Intercept &amp; inspect LLM API responses</td></tr>
-            <tr><td>Auto-Instrumentation</td><td>—</td><td><span class="badge-green">Yes (sitecustomize.py)</span></td><td>Monkey-patch all LLM frameworks</td></tr>
-            <tr><td>OpenClaw Plugin</td><td>—</td><td><span class="badge-green">Yes (loaded by gateway)</span></td><td>8-hook + 2-tool security enforcement</td></tr>
-          </tbody>
-        </table>
+      <div class="grid-2 fade-in" style="gap:2rem;">
+        <div class="card" style="border-left:3px solid #22c55e;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.5rem;">🏦</span>
+            <div>
+              <h3 style="margin:0;">Fintech</h3>
+              <span class="badge-green" style="font-size:0.75rem;">Production Ready</span>
+            </div>
+          </div>
+          <p><strong>12 breach types</strong> — unauthorized transactions, PCI data exposure, insider trading signals, KYC violations, AML red flags, and more.</p>
+          <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-secondary);">Compliance tags: <strong>PCI-DSS, SOX, GDPR</strong></p>
+        </div>
+        <div class="card" style="border-left:3px solid #3b82f6;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.5rem;">🏥</span>
+            <div>
+              <h3 style="margin:0;">Healthcare</h3>
+              <span style="font-size:0.75rem;padding:0.15rem 0.5rem;background:#dbeafe;color:#1d4ed8;border-radius:4px;font-weight:600;">Beta</span>
+            </div>
+          </div>
+          <p><strong>14 breach types</strong> — PHI exposure, unauthorized access to medical records, treatment recommendation without consent, substance abuse data leaks, and more.</p>
+          <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-secondary);">Compliance tags: <strong>HIPAA, 42 CFR Part 2</strong></p>
+        </div>
+        <div class="card" style="border-left:3px solid #a855f7;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.5rem;">💊</span>
+            <div>
+              <h3 style="margin:0;">Pharma</h3>
+              <span style="font-size:0.75rem;padding:0.15rem 0.5rem;background:#f3e8ff;color:#7c3aed;border-radius:4px;font-weight:600;">Beta</span>
+            </div>
+          </div>
+          <p><strong>14 breach types</strong> — trial data modification, unblinding events, adverse event suppression, GMP violations, electronic signature failures, and more.</p>
+          <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-secondary);">Compliance tags: <strong>FDA 21-CFR Part 11, ICH-E6, GMP</strong></p>
+        </div>
       </div>
     </div>
   </section>
@@ -162,23 +232,26 @@
       <p class="section-sub" style="margin:1rem auto 2rem;position:relative;z-index:1;">Install in minutes. Zero code changes. Every agent monitored. Every breach logged.</p>
       <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
         <a href="contact.html" class="btn btn-primary btn-lg">Request Early Access</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank" class="btn btn-outline btn-lg">View on GitHub →</a>
+        <a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank" class="btn btn-outline btn-lg">View on GitHub &rarr;</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="simple-footer">
-    <div class="simple-footer-inner">
-      <span class="simple-footer-copy">&copy; 2026 Sentinel</span>
-      <div class="simple-footer-links">
-        <a href="index.html">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/ParthaMehtaOrg/log-prompt-agent" target="_blank">GitHub</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="icon">🛡️</span> Sentinel</div>
+          <p class="footer-desc">Unified AI agent security platform — endpoint monitoring, real-time interception, policy enforcement, compliance breach detection, and DLP. Install once, everything is automatic.</p>
+        </div>
+        <div><h4>Product</h4><a href="features.html" class="footer-link">Features</a><a href="pricing.html" class="footer-link">Pricing</a><a href="docs.html" class="footer-link">Docs</a><a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank" class="footer-link">GitHub</a></div>
+        <div><h4>Company</h4><a href="about.html" class="footer-link">About</a><a href="blog.html" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div>
+        <div><h4>Legal</h4><a href="#" class="footer-link">Privacy Policy</a><a href="#" class="footer-link">Terms of Service</a><a href="#" class="footer-link">Security</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Sentinel. All rights reserved.</span>
+        <div class="footer-socials"><a href="https://github.com/ParthaMehtaOrg/sentinel-site-packages" target="_blank">GitHub</a></div>
       </div>
     </div>
   </footer>
